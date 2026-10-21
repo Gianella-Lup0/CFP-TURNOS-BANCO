@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Demostración Integrada - Turnero Bancario</title>
+  <link rel="stylesheet" href="style-demo.css">
+</head>
+<body>
+
+  <!-- Barra superior con estado y narrador en tiempo real -->
+  <header class="demo-navbar">
+    <div class="demo-title">
+      <h2>SISTEMA BANCARIO INTEGRADO</h2>
+      <span class="status-tag">Modo Simulación</span>
+    </div>
+
+    <!-- Banner Narrador -->
+    <div id="demo-narrator" class="demo-narrator">
+      <span class="narrator-icon">🎙️</span>
+      <p id="narrator-text">Presione "Iniciar Simulación" para comenzar el recorrido.</p>
+    </div>
+
+    <!-- Botón de disparo de la secuencia -->
+    <button type="button" id="btn-start-demo" class="btn-start">
+      ▶ Iniciar Simulación
+    </button>
+  </header>
+
+  <!-- Layout de 3 Columnas Asimétricas -->
+  <main class="demo-grid">
+    
+    <!-- Columna 1: Tótem -->
+    <div id="wrapper-totem" class="frame-wrapper glow-totem">
+      <div class="frame-label">1. Tótem Físico</div>
+      <div class="iframe-container">
+        <iframe id="frame-totem" src="totem.html" title="Tótem Bancario" scrolling="no"></iframe>
+      </div>
+    </div>
+
+    <!-- Columna 2: Operador -->
+    <div id="wrapper-operador" class="frame-wrapper glow-operador">
+      <div class="frame-label">2. Panel de Operador</div>
+      <div class="iframe-container">
+        <iframe id="frame-operador" src="operador.html" title="Panel Operador" scrolling="no"></iframe>
+      </div>
+    </div>
+
+    <!-- Columna 3: TV -->
+    <div id="wrapper-tv" class="frame-wrapper glow-tv">
+      <div class="frame-label">3. Pantalla de Sala (TV)</div>
+      <div class="iframe-container">
+        <iframe id="frame-tv" src="tv.html" title="Pantalla TV" scrolling="no"></iframe>
+      </div>
+    </div>
+
+  </main>
+
+  <script src="demo.js"></script>
+</body>
+</html>

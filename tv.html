@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pantalla TV - Turnos Llamados</title>
+  <link rel="stylesheet" href="style-tv.css">
+</head>
+<body>
+
+  <!-- Botón flotante para desbloquear la síntesis de voz del navegador -->
+  <button id="btn-audio" class="btn-audio-floats">
+    🔊 Activar Audio de Sala
+  </button>
+
+  <div id="tv-container">
+    
+    <!-- Zona Principal Hero (65% del ancho) -->
+    <main class="hero-zone">
+      <header class="hero-header">
+        <span class="bank-title">BANCO CIUDAD</span>
+        <span id="tv-clock" class="tv-clock">12:00:00</span>
+      </header>
+
+      <section class="hero-content">
+        <div id="hero-card" class="hero-card">
+          <span id="tv-badge" class="tv-badge">AGUARDANDO TURNO</span>
+          <h1 id="tv-numero" class="tv-numero">--</h1>
+          <p id="tv-servicio" class="tv-servicio">Sistema en espera</p>
+          <div id="tv-destino" class="tv-destino">Puesto --</div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Zona Lateral Historial (35% del ancho) -->
+    <aside class="history-zone">
+      <h2 class="history-title">Últimos Llamados</h2>
+      <ul id="history-list" class="history-list">
+        <li class="history-empty">Sin historial de llamadas</li>
+      </ul>
+    </aside>
+
+  </div>
+
+  <script src="tv.js"></script>
+</body>
+</html>

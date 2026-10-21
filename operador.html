@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Panel de Operador - Banco Ciudad</title>
+  <link rel="stylesheet" href="style-operador.css">
+</head>
+<body>
+
+  <main class="operator-container">
+    
+    <!-- Encabezado y Selector de Puesto -->
+    <header class="operator-header">
+      <div class="header-info">
+        <h1>Panel de Atención al Cliente</h1>
+        <span class="status-badge">En línea</span>
+      </div>
+      
+      <div class="puesto-selector-wrapper">
+        <label for="select-caja">Puesto actual:</label>
+        <select id="select-caja">
+          <option value="Caja 1">Caja 1</option>
+          <option value="Caja 2">Caja 2</option>
+          <option value="Box 1">Box 1</option>
+          <option value="Box 2">Box 2</option>
+        </select>
+      </div>
+    </header>
+
+    <!-- Telemetría de Colas (4 Tarjetas) -->
+    <section class="queues-telemetry">
+      <div class="telemetry-card card-priority">
+        <h3>Atención Prioritaria</h3>
+        <p class="queue-count" id="count-prioritaria">0</p>
+        <span class="queue-label">en espera</span>
+      </div>
+
+      <div class="telemetry-card card-cashier">
+        <h3>Operaciones por Caja</h3>
+        <p class="queue-count" id="count-caja">0</p>
+        <span class="queue-label">en espera</span>
+      </div>
+
+      <div class="telemetry-card card-cards">
+        <h3>Tarjetas y Cuentas</h3>
+        <p class="queue-count" id="count-tarjetas">0</p>
+        <span class="queue-label">en espera</span>
+      </div>
+
+      <div class="telemetry-card card-advisory">
+        <h3>Asesoría y Créditos</h3>
+        <p class="queue-count" id="count-asesoria">0</p>
+        <span class="queue-label">en espera</span>
+      </div>
+    </section>
+
+    <!-- Panel de Llamado y Turno en Atención -->
+    <section class="call-control-panel">
+      
+      <!-- Recuadro del Turno Actualmente en Atención -->
+      <div class="current-turn-card">
+        <h2>Turno en Atención</h2>
+        <div id="display-turno-actual" class="turn-display">--</div>
+        <div id="display-servicio-actual" class="service-display">Sin turno asignado</div>
+        <div id="display-puesto-actual" class="puesto-display">Puesto: -</div>
+      </div>
+
+      <!-- Acciones del Operador -->
+      <div class="actions-panel">
+        <button type="button" id="btn-llamar" class="btn-primary-call">
+          Llamar Siguiente Turno
+        </button>
+
+        <div class="secondary-actions">
+          <button type="button" id="btn-rellamar" class="btn-secondary" disabled>
+            🔔 Re-llamar
+          </button>
+          <button type="button" id="btn-ausente" class="btn-danger" disabled>
+            ❌ Marcar Ausente
+          </button>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- Sección de Gestión de Turnos Ausentes -->
+    <section class="absent-management-panel">
+      <h2>Turnos Ausentes (Temporal)</h2>
+      <ul id="lista-ausentes" class="absent-list">
+        <li class="absent-empty">No hay turnos ausentes registrados</li>
+      </ul>
+    </section>
+
+  </main>
+
+  <script src="operador.js"></script>
+</body>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard de Métricas - Banco Ciudad</title>
+  <link rel="stylesheet" href="style-metricas.css">
+</head>
+<body>
+
+  <main class="dashboard-container">
+    
+    <!-- Encabezado del Dashboard -->
+    <header class="dashboard-header">
+      <div class="header-title">
+        <h1>Dashboard de Métricas y Telemetría</h1>
+        <p>Monitoreo de rendimiento y demanda en tiempo real</p>
+      </div>
+      <div id="metricas-clock" class="metricas-clock">12:00:00</div>
+    </header>
+
+    <!-- Indicadores Clave de Rendimiento (KPIs) -->
+    <section class="kpi-grid">
+      <div class="kpi-card">
+        <h3>Total Emitidos</h3>
+        <p id="kpi-emitidos" class="kpi-value">0</p>
+        <span class="kpi-subtext">Tickets impresos</span>
+      </div>
+
+      <div class="kpi-card">
+        <h3>Total Atendidos</h3>
+        <p id="kpi-atendidos" class="kpi-value">0</p>
+        <span class="kpi-subtext">Convocados por caja/box</span>
+      </div>
+
+      <div class="kpi-card highlight">
+        <h3>Promedio de Espera</h3>
+        <p id="kpi-promedio" class="kpi-value">0.0 min</p>
+        <span class="kpi-subtext">Desde emisión a llamado</span>
+      </div>
+    </section>
+
+    <!-- Panel Principal: Gráfica de Barras en CSS Puro + Desglose -->
+    <section class="charts-section">
+      
+      <!-- Gráfica de Barras CSS Grid -->
+      <div class="chart-card">
+        <h2>Demanda por Servicio (Atendidos)</h2>
+        <div class="css-bar-chart">
+          
+          <div class="bar-group">
+            <div class="bar-wrapper">
+              <div id="bar-priority" class="bar bar-priority" style="height: 0%;">
+                <span class="bar-val" id="val-priority">0</span>
+              </div>
+            </div>
+            <span class="bar-label">Prioritaria</span>
+          </div>
+
+          <div class="bar-group">
+            <div class="bar-wrapper">
+              <div id="bar-cashier" class="bar bar-cashier" style="height: 0%;">
+                <span class="bar-val" id="val-cashier">0</span>
+              </div>
+            </div>
+            <span class="bar-label">Caja</span>
+          </div>
+
+          <div class="bar-group">
+            <div class="bar-wrapper">
+              <div id="bar-cards" class="bar bar-cards" style="height: 0%;">
+                <span class="bar-val" id="val-cards">0</span>
+              </div>
+            </div>
+            <span class="bar-label">Tarjetas</span>
+          </div>
+
+          <div class="bar-group">
+            <div class="bar-wrapper">
+              <div id="bar-advisory" class="bar bar-advisory" style="height: 0%;">
+                <span class="bar-val" id="val-advisory">0</span>
+              </div>
+            </div>
+            <span class="bar-label">Asesoría</span>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Tabla de Desglose por Servicio -->
+      <div class="table-card">
+        <h2>Detalle por Cola</h2>
+        <table class="metrics-table">
+          <thead>
+            <tr>
+              <th>Servicio</th>
+              <th>Atendidos</th>
+              <th>Promedio</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Atención Prioritaria</td>
+              <td id="tbl-count-priority">0</td>
+              <td id="tbl-avg-priority">0.0 min</td>
+            </tr>
+            <tr>
+              <td>Operaciones por Caja</td>
+              <td id="tbl-count-cashier">0</td>
+              <td id="tbl-avg-cashier">0.0 min</td>
+            </tr>
+            <tr>
+              <td>Tarjetas y Cuentas</td>
+              <td id="tbl-count-cards">0</td>
+              <td id="tbl-avg-cards">0.0 min</td>
+            </tr>
+            <tr>
+              <td>Asesoría y Créditos</td>
+              <td id="tbl-count-advisory">0</td>
+              <td id="tbl-avg-advisory">0.0 min</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+    </section>
+
+  </main>
+
+  <script src="metricas.js"></script>
+</body>
+</html>

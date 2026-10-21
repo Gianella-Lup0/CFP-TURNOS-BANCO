@@ -1,0 +1,193 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    background-color: #f1f5f9;
+    font-family: Arial, sans-serif;
+    color: #0f172a;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 16px;
+  }
+  
+  .mobile-card {
+    width: 100%;
+    max-width: 400px;
+    background-color: #ffffff;
+    border: 2px solid #cbd5e1;
+    border-radius: 24px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.08);
+    transition: background-color 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
+  }
+  
+  .mobile-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #e2e8f0;
+    padding-bottom: 12px;
+  }
+  
+  .bank-name {
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: #0284c7;
+  }
+  
+  .cliente-clock {
+    font-size: 14px;
+    color: #64748b;
+    font-weight: bold;
+  }
+  
+  .turn-info-section {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .section-label {
+    font-size: 12px;
+    color: #64748b;
+    letter-spacing: 1px;
+  }
+  
+  .user-turn-number {
+    font-size: 72px;
+    font-weight: 900;
+    color: #0f172a;
+    line-height: 1;
+  }
+  
+  .user-turn-service {
+    font-size: 16px;
+    color: #334155;
+    font-weight: 600;
+  }
+  
+  .status-box {
+    background-color: #f8fafc;
+    border-radius: 16px;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    border: 2px solid #e2e8f0;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+  }
+  
+  .status-badge {
+    font-size: 12px;
+    font-weight: bold;
+    padding: 4px 12px;
+    border-radius: 12px;
+    background-color: #e2e8f0;
+    color: #334155;
+    text-transform: uppercase;
+  }
+  
+  .waiting-counter-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .counter-number {
+    font-size: 48px;
+    font-weight: 900;
+    color: #0284c7;
+  }
+  
+  .counter-label {
+    font-size: 14px;
+    color: #64748b;
+  }
+  
+  .status-message {
+    font-size: 13px;
+    color: #64748b;
+    line-height: 1.4;
+  }
+  
+  .destination-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    width: 100%;
+  }
+  
+  .destination-label {
+    font-size: 12px;
+    color: #ffffff;
+    font-weight: bold;
+  }
+  
+  .destination-puesto {
+    font-size: 32px;
+    font-weight: 900;
+    color: #0f172a;
+    background-color: #ffffff;
+    padding: 8px 24px;
+    border-radius: 12px;
+    width: 100%;
+  }
+  
+  .mobile-footer {
+    text-align: center;
+    font-size: 11px;
+    color: #94a3b8;
+    border-top: 1px solid #e2e8f0;
+    padding-top: 12px;
+  }
+  
+  /* Estado Alerta al ser convocado */
+  .mobile-card.status-called {
+    background-color: #16a34a;
+    border-color: #22c55e;
+    box-shadow: 0px 0px 30px rgba(34, 197, 94, 0.5);
+    animation: pulso-llamado-movil 1.2s infinite alternate;
+  }
+  
+  .mobile-card.status-called .user-turn-number,
+  .mobile-card.status-called .user-turn-service,
+  .mobile-card.status-called .bank-name,
+  .mobile-card.status-called .cliente-clock,
+  .mobile-card.status-called .section-label {
+    color: #ffffff;
+  }
+  
+  .mobile-card.status-called .status-box {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-color: #86efac;
+  }
+  
+  .mobile-card.status-called .status-badge {
+    background-color: #ffffff;
+    color: #15803d;
+  }
+  
+  .mobile-card.status-called .status-message {
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 15px;
+  }
+  
+  @keyframes pulso-llamado-movil {
+    0% { transform: scale(1); }
+    100% { transform: scale(1.02); }
+  }

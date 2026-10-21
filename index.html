@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Banco Nacional - Sistema de Turnos Inteligente</title>
+  <link rel="stylesheet" href="style-index.css">
+</head>
+<body>
+
+  <!-- CONTENEDOR PRINCIPAL: CSS GRID -->
+  <main class="portal-layout">
+
+    <!-- CABECERA INSTITUCIONAL (FLEXBOX) -->
+    <header class="portal-header">
+      <div class="brand-badge">
+        <div class="brand-logo">BN</div>
+        <div class="brand-text">
+          <h1 class="brand-name">Banco Nacional</h1>
+          <span class="system-subtitle">Sistema de Turnos Inteligente con Prioridad</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- INTRODUCCIÓN Y CONTEXTO DEL PROYECTO -->
+    <section class="intro-section">
+      <h2 class="intro-title">Plataforma de Atención al Público en Tiempo Real</h2>
+      <p class="intro-description">
+        Este proyecto simula el ciclo integral de atención bancaria y gestión de prioridades (adultos mayores, embarazadas y personas con movilidad reducida).
+        Funciona mediante <strong>tres pantallas sincronizadas instantáneamente</strong> sin requerir servidores externos, utilizando la API nativa <code>BroadcastChannel</code> del navegador.
+      </p>
+    </section>
+
+    <!-- MATRIZ DE ACCESOS A LAS 3 VISTAS: CSS GRID -->
+    <section class="cards-grid">
+
+      <!-- TARJETA 1: TÓTEM BANCARIO (AUTOSERVICIO) -->
+      <article class="view-card card-client">
+        <div class="card-top">
+          <span class="view-tag tag-client">01 &bull; Kiosco Físico</span>
+          <span class="tech-tag">Tótem Táctil</span>
+        </div>
+        <div class="card-icon">🏛️</div>
+        <h3 class="card-title">Tótem de Autoservicio</h3>
+        <p class="card-description">
+          Simulador de la columna física de ingreso a la sucursal: pantalla táctil para elegir categoría (General o Prioritario) y ranura mecánica de donde emerge el ticket impreso.
+        </p>
+        <a href="totem.html" target="_blank" rel="noopener noreferrer" class="card-btn btn-client">
+          <span>Abrir Tótem Bancario</span>
+          <span class="btn-arrow">&rarr;</span>
+        </a>
+      </article>
+
+      <!-- TARJETA 2: OPERADOR (CAJA) -->
+      <article class="view-card card-operator">
+        <div class="card-top">
+          <span class="view-tag tag-operator">02 &bull; Escritorio</span>
+          <span class="tech-tag">Terminal Caja</span>
+        </div>
+        <div class="card-icon">🖥️</div>
+        <h3 class="card-title">Terminal del Operador</h3>
+        <p class="card-description">
+          Consola del cajero con selección de puesto (Caja 1, 2, Box 3), visualización de colas en espera y botón de llamado con criterio de prioridad estricta.
+        </p>
+        <a href="operador.html" target="_blank" rel="noopener noreferrer" class="card-btn btn-operator">
+          <span>Abrir Terminal Operador</span>
+          <span class="btn-arrow">&rarr;</span>
+        </a>
+      </article>
+
+      <!-- TARJETA 3: TV (SALA DE ESPERA) -->
+      <article class="view-card card-tv">
+        <div class="card-top">
+          <span class="view-tag tag-tv">03 &bull; Pantalla 16:9</span>
+          <span class="tech-tag">Señalética TV</span>
+        </div>
+        <div class="card-icon">📺</div>
+        <h3 class="card-title">Pantalla de Sala de Espera</h3>
+        <p class="card-description">
+          Monitor de pared para visión a 5 metros: turno gigante convocado, puesto asignado, distintivo de prioridad, historial de últimos llamados y locución por voz.
+        </p>
+        <a href="tv.html" target="_blank" rel="noopener noreferrer" class="card-btn btn-tv">
+          <span>Abrir Pantalla TV</span>
+          <span class="btn-arrow">&rarr;</span>
+        </a>
+      </article>
+
+    </section>
+
+    <!-- BARRA DE ACCESO A LA DEMO INTEGRADA EN VIVO -->
+    <section class="launch-strip">
+      <div class="launch-info">
+        <h4 class="launch-title">¿Querés ver el sistema funcionando en simultáneo?</h4>
+        <p class="launch-subtitle">Accedé al simulador interactivo con las tres pantallas en una sola vista, relato paso a paso e iluminación perimetral de foco activo.</p>
+      </div>
+      <div>
+        <a href="demo.html" target="_blank" rel="noopener noreferrer" class="btn-launch-all" style="text-decoration: none; display: inline-flex; align-items: center; gap: 8px;">
+          <span>🎮</span>
+          <span>Ver Demostración en Vivo</span>
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+</body>
+</html>

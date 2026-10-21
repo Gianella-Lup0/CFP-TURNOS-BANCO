@@ -1,0 +1,298 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  padding: 12px;
+  overflow: hidden;
+}
+
+.operator-container {
+  gap: 12px;
+}
+
+.turn-display {
+  font-size: 48px;
+}
+
+/* Encabezado */
+.operator-header {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 20px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.header-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.header-info h1 {
+  font-size: 20px;
+  color: #0f172a;
+}
+
+.status-badge {
+  font-size: 11px;
+  font-weight: bold;
+  background-color: #d1fae5;
+  color: #047857;
+  padding: 4px 10px;
+  border-radius: 12px;
+  text-transform: uppercase;
+}
+
+.puesto-selector-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.puesto-selector-wrapper label {
+  font-size: 14px;
+  color: #64748b;
+}
+
+.puesto-selector-wrapper select {
+  background-color: #f1f5f9;
+  color: #0f172a;
+  border: 1px solid #cbd5e1;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  outline: none;
+}
+
+/* Telemetría de Colas */
+.queues-telemetry {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.telemetry-card {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  text-align: center;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.04);
+}
+
+.telemetry-card h3 {
+  font-size: 13px;
+  color: #475569;
+}
+
+.queue-count {
+  font-size: 36px;
+  font-weight: 900;
+  color: #0f172a;
+}
+
+.queue-label {
+  font-size: 11px;
+  color: #94a3b8;
+}
+
+.card-priority { border-top: 4px solid #e11d48; }
+.card-cashier  { border-top: 4px solid #2563eb; }
+.card-cards    { border-top: 4px solid #0d9488; }
+.card-advisory { border-top: 4px solid #d97706; }
+
+/* Panel de Llamado */
+.call-control-panel {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.current-turn-card {
+  background-color: #ffffff;
+  border: 2px solid #cbd5e1;
+  border-radius: 16px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  text-align: center;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.current-turn-card h2 {
+  font-size: 14px;
+  color: #64748b;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.turn-display {
+  font-size: 64px;
+  font-weight: 900;
+  color: #0284c7;
+  line-height: 1;
+}
+
+.service-display {
+  font-size: 15px;
+  color: #0f172a;
+  font-weight: 600;
+}
+
+.puesto-display {
+  font-size: 13px;
+  color: #64748b;
+}
+
+/* Botones */
+.actions-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  justify-content: center;
+}
+
+.btn-primary-call {
+  background-color: #2563eb;
+  color: #ffffff;
+  border: none;
+  border-radius: 12px;
+  padding: 20px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0px 6px 16px rgba(37, 99, 235, 0.25);
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.btn-primary-call:hover {
+  background-color: #1d4ed8;
+}
+
+.btn-primary-call:active {
+  transform: scale(0.98);
+}
+
+.secondary-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.btn-secondary {
+  background-color: #0284c7;
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  padding: 14px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.btn-secondary:hover:not(:disabled) {
+  background-color: #0369a1;
+}
+
+.btn-danger {
+  background-color: #e11d48;
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  padding: 14px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.btn-danger:hover:not(:disabled) {
+  background-color: #be123c;
+}
+
+button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+/* Panel de Ausentes */
+.absent-management-panel {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 20px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.absent-management-panel h2 {
+  font-size: 15px;
+  color: #475569;
+  border-bottom: 1px solid #e2e8f0;
+  padding-bottom: 8px;
+}
+
+.absent-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.absent-item {
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 10px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.absent-info {
+  font-size: 14px;
+  color: #0f172a;
+}
+
+.btn-restore {
+  background-color: #059669;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  padding: 6px 12px;
+  font-size: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.btn-restore:hover {
+  background-color: #047857;
+}
+
+.absent-empty {
+  font-size: 13px;
+  color: #94a3b8;
+  font-style: italic;
+  text-align: center;
+  padding: 8px 0;
+}

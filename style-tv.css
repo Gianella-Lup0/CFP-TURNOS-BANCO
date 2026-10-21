@@ -1,0 +1,232 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #f1f5f9;
+  font-family: Arial, sans-serif;
+  color: #0f172a;
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#tv-container {
+  width: 100vw;
+  height: 100vh;
+  aspect-ratio: 16 / 9;
+  display: grid;
+  grid-template-columns: 65% 35%;
+  background-color: #f8fafc;
+}
+
+/* Zona Principal Hero */
+.hero-zone {
+  background-color: #ffffff;
+  padding: 40px;
+  border-right: 4px solid #e2e8f0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.hero-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bank-title {
+  font-size: 28px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: #0284c7;
+}
+
+.tv-clock {
+  font-size: 28px;
+  font-weight: bold;
+  color: #64748b;
+}
+
+.hero-content {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-card {
+  width: 100%;
+  background-color: #f8fafc;
+  border: 3px solid #cbd5e1;
+  border-radius: 24px;
+  padding: 40px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.08);
+  transition: border-color 0.3s ease;
+}
+
+.tv-badge {
+  font-size: 20px;
+  font-weight: bold;
+  padding: 8px 24px;
+  border-radius: 30px;
+  background-color: #e2e8f0;
+  color: #334155;
+  text-transform: uppercase;
+}
+
+.tv-badge.badge-priority {
+  background-color: #ffe4e6;
+  color: #e11d48;
+}
+
+.tv-numero {
+  font-size: 110px;
+}
+.tv-destino {
+  font-size: 48px;
+  padding: 10px 24px;
+}
+
+.hero-zone, .history-zone {
+  padding: 20px 16px;
+}
+.tv-servicio {
+  font-size: 32px;
+  color: #475569;
+  font-weight: 600;
+}
+
+
+/* Animación de pulso */
+.animar-llamado {
+  animation: pulso-llamado 1.5s ease-in-out;
+}
+
+@keyframes pulso-llamado {
+  0% {
+    transform: scale(1);
+    border-color: #cbd5e1;
+  }
+  20% {
+    transform: scale(1.03);
+    border-color: #0284c7;
+    box-shadow: 0px 0px 40px rgba(2, 132, 199, 0.4);
+  }
+  40% {
+    transform: scale(1);
+    border-color: #cbd5e1;
+  }
+  60% {
+    transform: scale(1.03);
+    border-color: #0284c7;
+    box-shadow: 0px 0px 40px rgba(2, 132, 199, 0.4);
+  }
+  100% {
+    transform: scale(1);
+    border-color: #cbd5e1;
+  }
+}
+
+/* Zona Lateral (Historial) */
+.history-zone {
+  background-color: #f8fafc;
+  padding: 40px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.history-title {
+  font-size: 28px;
+  color: #475569;
+  border-bottom: 2px solid #e2e8f0;
+  padding-bottom: 12px;
+}
+
+.history-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.history-item {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 16px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-left: 6px solid #0284c7;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.04);
+}
+
+.history-item.priority {
+  border-left-color: #e11d48;
+}
+
+.history-left {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.history-numero {
+  font-size: 28px;
+  font-weight: bold;
+  color: #0f172a;
+}
+
+.history-servicio {
+  font-size: 14px;
+  color: #64748b;
+}
+
+.history-caja {
+  font-size: 22px;
+  font-weight: bold;
+  color: #0284c7;
+}
+
+.history-empty {
+  color: #94a3b8;
+  font-style: italic;
+  font-size: 18px;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.btn-audio-floats {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  background-color: #0284c7;
+  color: #ffffff;
+  border: none;
+  padding: 14px 24px;
+  border-radius: 30px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0px 8px 20px rgba(2, 132, 199, 0.3);
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.btn-audio-floats:hover {
+  transform: scale(1.05);
+  background-color: #0369a1;
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tótem Bancario - Autoservicio</title>
+  <link rel="stylesheet" href="style-totem.css">
+</head>
+<body>
+
+  <!-- Chasis central vertical del Tótem -->
+  <main id="totem-chassis">
+    
+    <!-- Cabezal del tótem -->
+    <header class="totem-header">
+      <div class="brand-logo">
+        <span class="led-indicator"></span>
+        <h2>BANCO CIUDAD</h2>
+      </div>
+      <div id="totem-clock" class="totem-clock">12:00:00</div>
+    </header>
+
+    <!-- Pantalla táctil -->
+    <section class="screen-container">
+      <div class="screen-header">
+        <h1>Seleccione su trámite</h1>
+        <p>Presione una opción para retirar su comprobante</p>
+      </div>
+
+      <!-- Grilla 2x2 para los 4 botones de servicio -->
+      <div class="services-grid">
+        <button type="button" class="service-btn btn-priority" data-servicio="priority">
+          <span class="service-title">Atención Prioritaria</span>
+          <span class="service-code">(P-XX)</span>
+        </button>
+
+        <button type="button" class="service-btn btn-cashier" data-servicio="cashier">
+          <span class="service-title">Operaciones por Caja</span>
+          <span class="service-code">(C-XX)</span>
+        </button>
+
+        <button type="button" class="service-btn btn-cards" data-servicio="cards">
+          <span class="service-title">Tarjetas y Cuentas</span>
+          <span class="service-code">(T-XX)</span>
+        </button>
+
+        <button type="button" class="service-btn btn-advisory" data-servicio="advisory">
+          <span class="service-title">Asesoría y Créditos</span>
+          <span class="service-code">(A-XX)</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- Ranura mecánica inferior con ticket impreso -->
+    <footer class="dispenser-area">
+      <div id="dispenser-slot">
+        <div id="ticket-impreso">
+          <div class="ticket-header">BANCO CIUDAD</div>
+          <span id="ticket-badge" class="ticket-badge">GENERAL</span>
+          <div id="ticket-numero" class="ticket-number">C-00</div>
+          <div id="ticket-servicio" class="ticket-info">Seleccione un trámite</div>
+          <div id="ticket-espera" class="ticket-espera">Tiempo de espera est.: ~0 min</div>
+          <div id="ticket-fechahora" class="ticket-fechahora">--/--/---- --:--</div>
+          <div class="ticket-footer">Espere su turno en pantalla</div>
+        </div>
+      </div>
+    </footer>
+
+  </main>
+
+  <script src="totem.js"></script>
+</body>
+</html>

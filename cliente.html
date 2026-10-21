@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Turno - Banco Ciudad</title>
+  <link rel="stylesheet" href="style-cliente.css">
+</head>
+<body>
+
+  <main id="mobile-card" class="mobile-card">
+    
+    <!-- Encabezado Móvil -->
+    <header class="mobile-header">
+      <span class="bank-name">BANCO CIUDAD</span>
+      <span id="cliente-clock" class="cliente-clock">12:00</span>
+    </header>
+
+    <!-- Información de Mi Turno -->
+    <section class="turn-info-section">
+      <p class="section-label">SU TURNO ASIGNADO</p>
+      <h1 id="user-turn-number" class="user-turn-number">--</h1>
+      <p id="user-turn-service" class="user-turn-service">Cargando servicio...</p>
+    </section>
+
+    <!-- Estado y Contador de Espera -->
+    <section id="status-box" class="status-box status-waiting">
+      <div class="status-header">
+        <span id="status-badge" class="status-badge">En Espera</span>
+      </div>
+
+      <div id="waiting-counter-container" class="waiting-counter-container">
+        <span class="counter-number" id="turns-ahead-count">-</span>
+        <span class="counter-label" id="turns-ahead-label">turnos por delante</span>
+      </div>
+
+      <p id="status-message" class="status-message">
+        Mantenga esta pantalla abierta. Le avisaremos cuando sea su turno.
+      </p>
+
+      <div id="destination-box" class="destination-box" style="display: none;">
+        <span class="destination-label">POR FAVOR DIRÍJASE A:</span>
+        <span id="destination-puesto" class="destination-puesto">Puesto --</span>
+      </div>
+    </section>
+
+    <!-- Pie de página con recomendación -->
+    <footer class="mobile-footer">
+      <p>Servicio de Turnero Digital Móvil</p>
+    </footer>
+
+  </main>
+
+  <script src="cliente.js"></script>
+</body>
+</html>
